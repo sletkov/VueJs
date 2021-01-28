@@ -1,0 +1,9 @@
+body{
+    background-color: #f0ff8c;
+}
+
+#title,#info {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
