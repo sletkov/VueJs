@@ -21,10 +21,14 @@
         <h3 id="surname">{{ surname }}</h3>
         <input id="surnameInput" type="text" placeholder="Введите Фамилию" v-model="phrase1">
         <h3 id="name">{{ name }}</h3>
-        <input id="surnameInput" type="text" placeholder="Введите Имя" v-model="phrase2">
+        <input id="nameInput" type="text" placeholder="Введите Имя" v-model="phrase2">
         <h3>Число символов : {{length}}</h3>
-        <button>Записать</button>
+        <button v-bind:disabled="isDisabled" v-on:click="addNewNote">
+        записать
+      </button>
     </div>
+    <ol>
+    </ol>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="script.js"></script>

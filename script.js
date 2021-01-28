@@ -19,11 +19,50 @@ var form = new Vue({
         surname: "Фамилия",
         name:"Имя",
         phrase1:'',
-        phrase2:''  
+        phrase2:'',
+        isDisabled: true,
+        students: [] 
     },
     computed: {
         length: function () {
         return (this.phrase1.length + this.phrase2.length)
         }
+    },
+    methods: {
+        addNewNote() {
+            if (this.phrase1 !== "" && this.phrase2 !== "") {
+              this.students.push(
+                `${cFirstLet(this.phrase1)} ${cFirstLet(
+                  this.phrase2
+                )}`
+              );
+              this.phrase1 = "";
+              this.phrase2 = "";
+              console.log(this.students);
+            }
+          }
+    },
+    watch:{
+        phrase1(value) {
+            if (value.length > 0 && this.phrase2.length > 0) {
+              this.isDisabled = false;
+            } else {
+              this.isDisabled = true;
+            }
+          },
+      
+        phrase2(value) {
+            if (value.length > 0 && this.phrase1.length > 0) {
+              this.isDisabled = false;
+            } else {
+              this.isDisabled = true;
+            }
+        },
     }
 });
+
+function cFirstLet(word) {
+    return word[0].toUpperCase() + word.toLowerCase().slice(1);
+  }
+  
+  
