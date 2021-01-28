@@ -40,3 +40,22 @@ h1,h2,h3,h5,p,b {
     margin-left: 20px;
     margin-right: 100px;
 }
+
+.inner{
+    margin-bottom:60px;
+}
+ol{
+    background-color: whitesmoke;
+    border-radius: 75px;
+    padding: 30px;
+}
+.nothing {
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 75px;
+}
+button {
+    background-color: #f0ff8c;
+    padding: 10px 30px 10px 30px;
+    border-radius: 75px;
+}
